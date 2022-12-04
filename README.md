@@ -121,10 +121,10 @@ Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob
 
 ## Package Management
 
-```
+```RAML
 dependencies:
   flutter:
-    sdk: RAML
+    sdk: flutter
 
   cupertino_icons: ^1.0.2
   flutter_config: ^1.0.8 #for dotenv
