@@ -223,15 +223,37 @@ Use with the CupertinoIcons class for iOS style icons.
 ### flutter_config
 
 #### Installation
+This allows you to use `.env` files. 
+
 ```console
 > flutter flutter pub add flutter_config  
 ```  
   
 #### Configuration
-  
+For this project, You need to setup variables below in your `C:\Workspace\.env`.  
+*You must get your ID's from cloud platform first.*  
+```
+YOUR_CLIENT_ID_HERE = "Naver Client ID"
+YOUR_APPLICATION_ID_HERE = "Google Admob Application ID"
+```
   
 #### Usage
-  
+After setting up your `.env`, we will use them in `C:\Workspace\android\app\src\main\AndroidManifest.xml`  
+```xml
+...
+ <application
+        android:label="CaMap"
+        android:name="${applicationName}"
+        android:icon="@mipmap/camap_icon">
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID" 
+            android:value="@string/YOUR_CLIENT_ID_HERE" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/YOUR_APPLICATION_ID_HERE" />
+        <activity
+            ...
+```
   
 ### naver_map_plugin
 
