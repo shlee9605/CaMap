@@ -66,18 +66,19 @@ And I published this App via Google Play Store
 │   │   ├── Info.plist		    # ios runner config
 │   │   └── ...etc
 │   └── ...etc
-├── test                            # DB를 모델링하는 sequelize의 모델 함수용 폴더
-│   ├── connection.js               # DB연결 처리 함수
-│   ├── department.js
-│   ├── device.js
-│   ├── index.js                    # sequelize를 이용한 DB설정 파일
-│   └── user.js
-├── web		                    # npm install후 생성되는 라이브러리 모음 폴더
-│   └── ...
-├── windows                         # express에서 생성한 정적파일 영역
-│   ├── images
-│   ├── javascripts
-│   └── stylesheets
+├── test                            # Unit, Function, Class, Widget, Total test
+├── web		                    # Web config
+│   ├── icons
+│   ├── favicon.png
+│   ├── index.html
+│   └── ...etc
+├── windows                         # Windows config
+│   ├── flutter			    # flutter windows config
+│   │   └── ...etc
+│   ├── runner			    # runner in windows
+│   │   └── ...etc
+│   ├── CMakeLists.txt
+│   └── ...etc
 ├── .dart_tool                          # Router 폴더
 │   ├── auth.js
 │   ├── department.js
