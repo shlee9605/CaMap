@@ -127,6 +127,8 @@ Then, set your working space for flutter
 ## Installation
 You need to set up both Android Studio and Flutter  
 Checkout [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e) for Installation in Windows  
+You can also refer to [Google flutter documents](https://docs.flutter.dev/),  
+which includes [Installation](https://docs.flutter.dev/get-started/install), [Lab](https://docs.flutter.dev/get-started/codelab), and [Cookbook](https://docs.flutter.dev/cookbook).
   
 ## Create Project
 Create Your Project
@@ -200,17 +202,7 @@ dependencies:
   google_mobile_ads: ^2.3.0 					#for google ad
   geolocator: ^8.2.1  
 ```
-
-**Assets**
-```RAML
-flutter:
-  uses-material-design: true
-
-  assets:
-  - assets/markers/ 	#for marker location in csv
-  - assets/areas/ 	#for marker image icon in png
-```
-
+  
 ## cupertino_icons
 
 ### Installation
@@ -290,7 +282,8 @@ This allows you to use google mobile ad banner in organized form/widget.
 > flutter flutter pub add google_mobile_ads  
 ```  
   
-I also had to write manual in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#1f80ba301cd74cc6b3f46a7a1b1fffa3) since this plugin also requires lots of information about google cloud platform, firebase, and Admob  
+I also had to write manual in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#1f80ba301cd74cc6b3f46a7a1b1fffa3),  
+since this plugin also requires lots of information about google cloud platform, firebase, and Admob  
   
   
 ## geolocator
@@ -310,27 +303,21 @@ This gives you exact coordinates about your location
   
 ## etc
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
-
-flutter pub get 할 때 받는 파일들(명령어
-내가 어떻게 썼는지(사용), 어떻게 쓰는지(설정)
-
+  
+  
 # 4. Setting Configuration
 
-	This project is a starting point for a Flutter application.
-	
-	A few resources to get you started if this is your first Flutter project:
-	
-	- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-	- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-	
-	For help getting started with Flutter development, view the
-	[online documentation](https://docs.flutter.dev/), which offers tutorials,
-	samples, guidance on mobile development, and a full API reference.
+In `C:\Workspace\pubspec.yaml`,  
 
+**Assets**
+```RAML
+flutter:
+  uses-material-design: true
 
-run 명령어 등 시작하기
-노션 참고하라고 써주고, 플러터 프로젝트 자체를 만드는 명령어나 구글 참고하는하는 내용만 적어주기
-DB연동
+  assets:
+  - assets/markers/ 	#for marker location in csv
+  - assets/areas/ 	#for marker image icon in png
+```
 
 최초 생성시 바꿔줘야할 내용?
 
