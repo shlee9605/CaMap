@@ -13,8 +13,18 @@ And I published this App via Google Play Store
 
 ```
 .
-├── android
-│   └── settings.json               # /.vscode/settings.json: VScode사용에 따른 환경 설정 파일
+├── android			    # android config
+│   ├── .gradle		            # gradle config
+│   ├── app
+│   │   ├── 
+│   │   ├── 
+│   │   └── 
+│   ├── gradle
+│   │   └── wrapper		    #gradle wrapper
+│   ├── build.gradle
+│   ├── key.properties		    #key properties
+│   ├── local.properties	    #local properties
+│   └── ...etc
 ├── ios
 │   └── www                         # /bin/www: 앱 실행 파일
 ├── lib                             # DB를 사용하는 sequelize의 쿼리 함수용 폴더
