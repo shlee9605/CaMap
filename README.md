@@ -133,9 +133,14 @@ Checkout [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be2
 ### Create Project
 Create Your Project
 ```console
-C:\Workspace > flutter create "Project Name"
+> flutter create "Project Name"
 ```
+  
+### Running Project
+You can run your project either via hotkey or cli commands  
 
+#### 1. via hotkey(in VSC)
+Press `CTRL+F5`
 
 플러터 코드 실행  
 no-sound-null-safety
