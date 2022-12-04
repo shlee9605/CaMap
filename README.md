@@ -359,12 +359,12 @@ assets/
 ```
   
 ## dotenv configuration
-
+  
+We have already discuss about using dotenv configuration above.  
+Please note 
+  
 ## assets configuration
-
-## keystore configuration
-
-## proguard configuration
+  
 In `C:\Workspace\pubspec.yaml`,  
 
 **Assets**
@@ -374,8 +374,15 @@ flutter:
 
   assets:
   - assets/markers/ 	#for marker location in csv
-  - assets/areas/ 	#for marker image icon in png
+  - assets/areas/ 	  #for marker image icon in png
 ```
+  
+Then, make assets/markers & assets/areas folder in `C:\Workspace`.  
+  
+## keystore configuration
+
+## proguard configuration
+
   
   
 # 5. Used Concept
