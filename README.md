@@ -119,16 +119,18 @@ Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob
 
 ## Configuration
 
-
+### Setup
+For Development OS, I used `Windows10`.  
+Then, set your working space for flutter  
 ```console
 > cd C:\Workspace
 ```
 
-디렉토리 이동
-플러터 설치
-플러터 폴더 생성
+디렉토리 이동  
+플러터 설치  
+플러터 폴더 생성  
 
-플러터 코드 실행
+플러터 코드 실행  
 no-sound-null-safety
 
 ## Package Management
