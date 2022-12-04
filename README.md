@@ -34,11 +34,14 @@ And I published this App via Google Play Store
 │   ├── key.properties		    # key properties
 │   ├── local.properties	    # local properties
 │   └── ...etc
-├── ios
+├── ios				    # ios config
 │   ├── Flutter
 │   ├── Runner
-│   │   ├── 
-│   │   └── 
+│   │   ├── Assets.xcassets	    # app icons
+│   │   ├── Base.lproj		    
+│   │   ├── AppDelegate.swift
+│   │   ├── Info.plist		    # ios runner config
+│   │   └── ...etc
 │   └── ...etc
 ├── lib                             # DB를 사용하는 sequelize의 쿼리 함수용 폴더
 │   ├── departmentDao.js
