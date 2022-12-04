@@ -2,7 +2,7 @@
 
 //flutter run --release --no-sound-null-safety
 //flutter run --debug --no-sound-null-safety
-//flutter build appbundle --no-sound-null-safety 
+//flutter build appbundle --no-sound-null-safety
 
 import 'dart:async';
 
