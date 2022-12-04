@@ -275,15 +275,50 @@ For this project, You need to setup csv files in your asset folders `C:\Workspac
 Move your `csv` files which contains location coordinate data.  
 csv file must include information of location name(id), latitude, and longitude.  
 
-Below shows you some of examples
+Below shows you some of examples of csv contents.  
 ```
 1-1,37.50375605,127.0241095
 1-2,37.48276664,127.0349496
 1-3,37.48124455,127.0361898
+...
 ```
   
 ### Usage
-  
+Below code shows example how I applied in this project
+```dart
+class SmokingAreaData {
+  //for trashcan area
+  static List<List<dynamic>>? csvData;
+
+  //read csv data from assets/areas
+  static Future<List<List<dynamic>>> processCsv() async {
+    var result = await rootBundle.loadString(
+      "assets/areas/Seocho_SmokingArea.csv",
+    );
+    return const CsvToListConverter().convert(result, eol: "\n");
+  }
+
+  //return as list of custom marker, using csv data
+  static Future<List<CustomMarker>> markers() async {
+    List<AreaType> areas = [];
+    csvData = await processCsv();
+
+    //add in area list using which gives you areatype
+    for (List<dynamic> lt in csvData!) {
+      areas.add(SmokingArea(aid: lt[0], location: LatLng(lt[1], lt[2])));
+    }
+
+    List<CustomMarker> temp = [];
+
+    //create custom marker list using areatype
+    for (AreaType st in areas) {
+      temp.add(CustomMarker.fromMyAreas(st));
+    }
+
+    return temp;
+  }
+}
+```
   
 ## google_mobile_ads
 
