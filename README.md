@@ -264,12 +264,23 @@ I wrote detailed manual about this plugin in [My Notion(in Kor)](https://www.not
 ## csv
 
 ### Installation
+This allows you to read csv files in flutter.  
+
 ```console
-> flutter flutter pub add   
+> flutter flutter pub add csv  
 ```  
   
 ### Configuration
-  
+For this project, You need to setup csv files in your asset folders `C:\Workspace\assets\areas`.  
+Move your `csv` files which contains location coordinate data.  
+csv file must include information of location name(id), latitude, and longitude.  
+
+Below shows you some of examples
+```
+1-1,37.50375605,127.0241095
+1-2,37.48276664,127.0349496
+1-3,37.48124455,127.0361898
+```
   
 ### Usage
   
