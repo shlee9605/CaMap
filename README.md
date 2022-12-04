@@ -361,7 +361,7 @@ assets/
 ## dotenv configuration
   
 We have already discuss about using dotenv configuration above.  
-Please note 
+Please note [flutter_config](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#flutter_config)
   
 ## assets configuration
   
