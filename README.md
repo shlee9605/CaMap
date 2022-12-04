@@ -113,9 +113,8 @@ And I published this App via Google Play Store
 # 2. Develop Environment
 
 ## Platform
-For : Android(current), IOS, Windows, Linux(not done)
-Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob
-
+For : Android(current), IOS, Windows, Linux(not done)  
+Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob  
 
 ## Configuration
 
