@@ -115,6 +115,7 @@ And I published this App via Google Play Store
 ## Platform
 For : Android(current), IOS, Windows, Linux(not done)  
 Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob  
+**You Must Refer My Notion(in Kor) Together for [Plugin Packages Description](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e) of This Project**  
 
 ## Configuration
 
