@@ -287,7 +287,7 @@ Below shows you some of examples of csv contents.
 Below code shows example how I applied in this project
 ```dart
 class SmokingAreaData {
-  //for trashcan area
+  //for smoking area
   static List<List<dynamic>>? csvData;
 
   //read csv data from assets/areas
