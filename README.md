@@ -213,25 +213,18 @@ flutter:
 ### cupertino_icons
 
 #### Installation
+The following adds the Cupertino Icons font to your application.  
+Use with the CupertinoIcons class for iOS style icons.  
+
 ```console
 > flutter flutter pub add cupertino_icons  
 ```  
-  
-#### Configuration
-  
-  
-  
-#### Usage
-```
-The following adds the Cupertino Icons font to your application.
-Use with the CupertinoIcons class for iOS style icons.
-```
   
 ### flutter_config
 
 #### Installation
 ```console
-> flutter flutter pub add   
+> flutter flutter pub add flutter_config  
 ```  
   
 #### Configuration
