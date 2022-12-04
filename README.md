@@ -120,6 +120,17 @@ Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob
 ## Configuration
 
 
+```console
+> cd C:\Workspace
+```
+
+디렉토리 이동
+플러터 설치
+플러터 폴더 생성
+
+플러터 코드 실행
+no-sound-null-safety
+
 ## Package Management
 
 ```RAML
@@ -137,7 +148,9 @@ dependencies:
 ```
 
 ### cupertino_icons
-
+*****
+flutter pub add cupertino_icons
+*****
 ### flutter_config
 
 ### naver_map_plugin
@@ -150,6 +163,9 @@ dependencies:
 
 ### etc
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
+
+flutter pub get 할 때 받는 파일들(명령어
+내가 어떻게 썼는지(사용), 어떻게 쓰는지(설정)
 
 # 3. Getting Started
 
