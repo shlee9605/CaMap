@@ -137,11 +137,36 @@ Create Your Project
 ```
   
 ### Running Project
-You can run your project either via hotkey or cli commands  
+You can run your project via commands below
 
-#### 1. via hotkey(in VSC)
-Press `CTRL+F5`
+#### default(release)
+```console
+> flutter run
+> flutter run --release
+```
+  
+If null safety error occurs,
+```console
+> flutter run --no-sound-null-safety
+> flutter run --release --no-sound-null-safety
+```
+  
+#### Debug
+In debugging mode,  
 
+```console
+> flutter run --debug
+```
+  
+If null safety error occurs,
+```console
+> flutter run --debug --no-sound-null-safety
+```
+
+#### Build
+To publish your project, You need to build your project first.  
+You can build your project through commands below.  
+You can find your appbundle here : *`C:\Workspace\build\app\outputs\bundle\release`*
 플러터 코드 실행  
 no-sound-null-safety
 
