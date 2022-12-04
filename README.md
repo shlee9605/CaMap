@@ -334,10 +334,10 @@ DB연동
 
 최초 생성시 바꿔줘야할 내용?
 
-# 4. Used Concept
+# 5. Used Concept
 
 CRUD구조 같은 거
 
-# 5. Usage Example
+# 6. Usage Example
 
 프로그램 예시
