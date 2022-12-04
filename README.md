@@ -309,6 +309,7 @@ This gives you exact coordinates about your location
 # 4. Setting Configuration
 Create your `.gitignore` file in `C:\Workspace`, then setup like below.  
 In `C:\Workspace\.gitignore`,  
+  
 ```
 .env
 assets/
@@ -317,7 +318,14 @@ assets/
 /android/app/proguard-rules.pro
 ...       # default .gitignore for flutter  
 ```
+  
+## dotenv configuration
 
+## assets configuration
+
+## keystore configuration
+
+## proguard configuration
 In `C:\Workspace\pubspec.yaml`,  
 
 **Assets**
