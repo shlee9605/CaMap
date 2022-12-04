@@ -9,46 +9,42 @@
 	I've got the area informaition from Seoul City hall,  
 	And I published this App via Google Play Store
   
-## Getting Started
+# File Structure
 
-This project is a starting point for a Flutter application.
+폴더구조
 
-A few resources to get you started if this is your first Flutter project:
+# Develop Environment
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-
-
-환경 : Android, IOS, Windows, Linux
-
-
-</aside>
-
-전체구조
-
-개발환경
+개발환경 - 플랫폼 Android, IOS, Windows, Linux
 
 환경설정
 
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
 
-사용법
+# Getting Started
 
-시작하기
+	This project is a starting point for a Flutter application.
+	
+	A few resources to get you started if this is your first Flutter project:
+	
+	- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+	- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+	
+	For help getting started with Flutter development, view the
+	[online documentation](https://docs.flutter.dev/), which offers tutorials,
+	samples, guidance on mobile development, and a full API reference.
 
+
+run 명령어 등 시작하기
+노션 참고하라고 써주고, 플러터 프로젝트 자체를 만드는 명령어나 구글 참고하는하는 내용만 적어주기
 DB연동
 
-users관련 구코드 삭제
+최초 생성시 바꿔줘야할 내용?
 
-개념
+# Used Concept from Computer Science
 
-CRUD구조
+CRUD구조 같은 거
 
-Example
+# Example
 
-Table Join
+프로그램 예시
