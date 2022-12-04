@@ -380,9 +380,14 @@ flutter:
 Then, make assets/markers & assets/areas folder in `C:\Workspace`.  
   
 ## keystore configuration
-
+  
+keystore configuration requires basic knowledge about key signing.
+Check out [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#a575498637cf4011b617deda1e9cfd72)  
+  
 ## proguard configuration
-
+  
+proguard configuration requires basic knowledge about multidex support.  
+Check out either [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#8a23338df33c40a9b3aa377f048ca3b8) or [Google flutter documents](https://docs.flutter.dev/deployment/android#enabling-multidex-support).  
   
   
 # 5. Used Concept
