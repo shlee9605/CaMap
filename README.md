@@ -121,6 +121,20 @@ Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob
 
 ## Package Management
 
+```
+dependencies:
+  flutter:
+    sdk: RAML
+
+  cupertino_icons: ^1.0.2
+  flutter_config: ^1.0.8 #for dotenv
+  naver_map_plugin: ^0.9.6 #for naver map
+    # git: https://github.com/LBSTECH/naver_map_plugin.git
+  csv: ^5.0.0 #for reading csv
+  google_mobile_ads: ^2.3.0 #for google ad
+  geolocator: ^8.2.1  
+```
+
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
 
 # 3. Getting Started
