@@ -166,10 +166,21 @@ If null safety error occurs,
 #### Build
 To publish your project, You need to build your project first.  
 You can build your project through commands below.  
-You can find your appbundle here : *`C:\Workspace\build\app\outputs\bundle\release`*
-플러터 코드 실행  
-no-sound-null-safety
+You can find your appbundle here : **`C:\Workspace\build\app\outputs\bundle\release`**  
+*(Running flutter build defaults to a release build.)*
 
+```console
+> flutter build appbundle
+> flutter build appbundle --release
+> flutter build appbundle --debug
+```  
+  
+If null safety error occurs,
+> flutter build appbundle --no-sound-null-safety
+> flutter build appbundle --release --no-sound-null-safety
+> flutter build appbundle --debug --no-sound-null-safety
+```  
+  
 ## Package Management
 
 ```RAML
