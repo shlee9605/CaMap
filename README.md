@@ -252,7 +252,7 @@ After setting up your `.env`, we will use them in `C:\Workspace\android\app\src\
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/YOUR_APPLICATION_ID_HERE" />
         <activity
-            ...
+...
 ```
   
 ### naver_map_plugin
