@@ -112,9 +112,15 @@ And I published this App via Google Play Store
 
 # 2. Develop Environment
 
-개발환경 - 플랫폼 Android, IOS, Windows, Linux
+## Platform
+For : Android(current), IOS, Windows, Linux(not done)
+Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob
 
-환경설정
+
+## Configuration
+
+
+## Package Management
 
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
 
