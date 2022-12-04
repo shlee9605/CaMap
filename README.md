@@ -224,6 +224,7 @@ This allows you to use `.env` files.
   
 ### Configuration
 For this project, You need to setup variables below in your `C:\Workspace\.env`.  
+Create `.env` file, then setup like below.  
 *You must get your ID's from cloud platform first.*  
 ```
 YOUR_CLIENT_ID_HERE = "Naver Client ID"
@@ -306,6 +307,8 @@ This gives you exact coordinates about your location
   
   
 # 4. Setting Configuration
+In `C:\Workspace\.gitignore`,  
+
 
 In `C:\Workspace\pubspec.yaml`,  
 
@@ -318,13 +321,13 @@ flutter:
   - assets/markers/ 	#for marker location in csv
   - assets/areas/ 	#for marker image icon in png
 ```
-
-최초 생성시 바꿔줘야할 내용?
-
+  
+  
 # 5. Used Concept
-
+  
 CRUD구조 같은 거
-
+  
 # 6. Usage Example
-
+  
 프로그램 예시
+  
