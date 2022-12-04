@@ -115,7 +115,7 @@ And I published this App via Google Play Store
 ## Platform
 For : Android(current), IOS, Windows, Linux(not done)  
 Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob  
-**You Must Refer My Notion(in Kor) Together for [Plugin Packages Description](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e) of This Project**  
+**You Must Refer [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e) Together for Plugin Packages Description of This Project**  
 
 ## Configuration
 
@@ -136,6 +136,19 @@ dependencies:
   geolocator: ^8.2.1  
 ```
 
+### cupertino_icons
+
+### flutter_config
+
+### naver_map_plugin
+
+### csv
+
+### google_mobile_ads
+
+### geolocator
+
+### etc
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
 
 # 3. Getting Started
