@@ -199,9 +199,14 @@ dependencies:
 ```
 
 ### cupertino_icons
-*****
-flutter pub add cupertino_icons
-*****
+
+#### Installation
+```console
+> flutter flutter pub add cupertino_icons  
+```  
+  
+#### Configuration
+
 ### flutter_config
 
 ### naver_map_plugin
