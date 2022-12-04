@@ -16,14 +16,23 @@ And I published this App via Google Play Store
 ├── android			    # android config
 │   ├── .gradle		            # gradle config
 │   ├── app
-│   │   ├── 
-│   │   ├── 
-│   │   └── 
+│   │   ├── src
+│   │   │   ├── debug		    # debug manifest
+│   │   │   ├── main		    # main manifest
+│   │   │   │   ├── java
+│   │   │   │   ├── kotlin
+│   │   │   │   └── res		    # resources
+│   │   │   │   │   ├── drawable
+│   │   │   │   │   ├── mipmap	    # app icons
+│   │   │   │   │   └── values
+│   │   │   └── profile		    # profile manifest
+│   │   ├── build.gradle	    # app/build.gradle
+│   │   └── ...etc
 │   ├── gradle
-│   │   └── wrapper		    #gradle wrapper
+│   │   └── wrapper		    # gradle wrapper
 │   ├── build.gradle
-│   ├── key.properties		    #key properties
-│   ├── local.properties	    #local properties
+│   ├── key.properties		    # key properties
+│   ├── local.properties	    # local properties
 │   └── ...etc
 ├── ios
 │   └── www                         # /bin/www: 앱 실행 파일
@@ -109,7 +118,7 @@ DB연동
 
 최초 생성시 바꿔줘야할 내용?
 
-# Used Concept from Computer Science
+# Used Concept
 
 CRUD구조 같은 거
 
