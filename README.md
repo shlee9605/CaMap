@@ -130,8 +130,12 @@ Then, set your working space for flutter
 You need to set up both Android Studio and Flutter  
 Checkout [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e) for Installation in Windows  
   
+### Create Project
+Create Your Project
+```console
+C:\Workspace > flutter create "Project Name"
+```
 
-플러터 폴더 생성  
 
 플러터 코드 실행  
 no-sound-null-safety
