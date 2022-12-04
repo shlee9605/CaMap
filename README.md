@@ -192,11 +192,11 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  flutter_config: ^1.0.8 #for dotenv
-  naver_map_plugin: ^0.9.6 #for naver map
-    # git: https://github.com/LBSTECH/naver_map_plugin.git
-  csv: ^5.0.0 #for reading csv
-  google_mobile_ads: ^2.3.0 #for google ad
+  flutter_config: ^1.0.8					#for dotenv
+  naver_map_plugin: ^0.9.6 					#for naver map
+    # git: https://github.com/LBSTECH/naver_map_plugin.git	#for latest version of naver map
+  csv: ^5.0.0 							#for reading csv
+  google_mobile_ads: ^2.3.0 					#for google ad
   geolocator: ^8.2.1  
 ```
 
@@ -206,8 +206,8 @@ flutter:
   uses-material-design: true
 
   assets:
-  - assets/markers/ #for marker location in csv
-  - assets/areas/ #for marker image icon in png
+  - assets/markers/ 	#for marker location in csv
+  - assets/areas/ 	#for marker image icon in png
 ```
 
 ### cupertino_icons
@@ -219,6 +219,12 @@ flutter:
   
 #### Configuration
 
+#### Usage
+```
+The following adds the Cupertino Icons font to your application.
+Use with the CupertinoIcons class for iOS style icons.
+```
+  
 ### flutter_config
 
 ### naver_map_plugin
