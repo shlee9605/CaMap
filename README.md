@@ -299,7 +299,7 @@ class SmokingAreaData {
   }
 
   //return as list of custom marker, using csv data
-  static Future<List<CustomMarker>> markers() async {
+  static Future<List<AreaType>> markers() async {
     List<AreaType> areas = [];
     csvData = await processCsv();
 
@@ -307,15 +307,8 @@ class SmokingAreaData {
     for (List<dynamic> lt in csvData!) {
       areas.add(SmokingArea(aid: lt[0], location: LatLng(lt[1], lt[2])));
     }
-
-    List<CustomMarker> temp = [];
-
-    //create custom marker list using areatype
-    for (AreaType st in areas) {
-      temp.add(CustomMarker.fromMyAreas(st));
-    }
-
-    return temp;
+    
+    return areas;
   }
 }
 ```
