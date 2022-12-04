@@ -35,7 +35,11 @@ And I published this App via Google Play Store
 │   ├── local.properties	    # local properties
 │   └── ...etc
 ├── ios
-│   └── www                         # /bin/www: 앱 실행 파일
+│   ├── Flutter
+│   ├── Runner
+│   │   ├── 
+│   │   └── 
+│   └── ...etc
 ├── lib                             # DB를 사용하는 sequelize의 쿼리 함수용 폴더
 │   ├── departmentDao.js
 │   ├── deviceDao.js
