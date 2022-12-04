@@ -13,9 +13,10 @@ And I published this App via Google Play Store
 
 [**1. File Structure**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#1-file-structure)  
 [**2. Develop Environment**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#2-Develop-Environment)  
-[**3. Getting Started**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#3-Getting-Started)  
-[**4. Used Concept**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#4-Used-Concept)  
-[**5. Usage Example**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#5-Usage-Example)  
+[**3. Getting Packages**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#3-Getting-Packages)  
+[**4. Setting Configuration**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#4-Setting-Configuration)  
+[**5. Used Concept**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#5-Used-Concept)  
+[**6. Usage Example**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#6-Usage-Example)  
 
 # 1. File Structure
 
@@ -112,34 +113,31 @@ And I published this App via Google Play Store
 
 # 2. Develop Environment
 
-## Platform
 For : Android(current), IOS, Windows, Linux(not done)  
 Used : Google Cloud, Firebase, Naver Cloud, Play Store, Google Admob  
 **You Must Refer [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e) Together for Plugin Packages Description of This Project**  
 
-## Configuration
-
-### Setup
+## Setup
 For Development OS, I used `Windows10`.  
 Then, set your working space for flutter  
 ```console
 > cd C:\Workspace
 ```
   
-### Installation
+## Installation
 You need to set up both Android Studio and Flutter  
 Checkout [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e) for Installation in Windows  
   
-### Create Project
+## Create Project
 Create Your Project
 ```console
 > flutter create "Project Name"
 ```
   
-### Running Project
+## Running Project
 You can run your project via commands below
 
-#### default(release)
+### default(release)
 ```console
 > flutter run
 > flutter run --release
@@ -151,7 +149,7 @@ If null safety error occurs,
 > flutter run --release --no-sound-null-safety
 ```
   
-#### Debug
+### Debug
 In debugging mode,  
 
 ```console
@@ -163,7 +161,7 @@ If null safety error occurs,
 > flutter run --debug --no-sound-null-safety
 ```
 
-#### Build
+### Build
 To publish your project, You need to build your project first.  
 You can build your project through commands below.  
 You can find your appbundle here : **`C:\Workspace\build\app\outputs\bundle\release`**  
@@ -182,7 +180,10 @@ If null safety error occurs,
 > flutter build appbundle --debug --no-sound-null-safety
 ```  
   
-## Package & Asset Management
+## System Link with your DB(database)
+will be updated in ver 2.0  
+  
+# 3. Getting Packages
 In `C:\Workspace\pubspec.yaml`,  
 
 **Packages**
@@ -210,9 +211,9 @@ flutter:
   - assets/areas/ 	#for marker image icon in png
 ```
 
-### cupertino_icons
+## cupertino_icons
 
-#### Installation
+### Installation
 The following adds the Cupertino Icons font to your application.  
 Use with the CupertinoIcons class for iOS style icons.  
 
@@ -220,16 +221,16 @@ Use with the CupertinoIcons class for iOS style icons.
 > flutter flutter pub add cupertino_icons  
 ```  
   
-### flutter_config
+## flutter_config
 
-#### Installation
+### Installation
 This allows you to use `.env` files. 
 
 ```console
 > flutter flutter pub add flutter_config  
 ```  
   
-#### Configuration
+### Configuration
 For this project, You need to setup variables below in your `C:\Workspace\.env`.  
 *You must get your ID's from cloud platform first.*  
 ```
@@ -237,7 +238,7 @@ YOUR_CLIENT_ID_HERE = "Naver Client ID"
 YOUR_APPLICATION_ID_HERE = "Google Admob Application ID"
 ```
   
-#### Usage
+### Usage
 After setting up your `.env`, we will use them in `C:\Workspace\android\app\src\main\AndroidManifest.xml`  
 ```xml
 ...
@@ -255,9 +256,9 @@ After setting up your `.env`, we will use them in `C:\Workspace\android\app\src\
 ...
 ```
   
-### naver_map_plugin
+## naver_map_plugin
 
-#### Installation
+### Installation
 This allows you to use Naver API via naver_map_plugin.  
 
 ```console
@@ -267,22 +268,22 @@ This allows you to use Naver API via naver_map_plugin.
 Because this plugin requires lots of information about naver cloud platform,  
 I wrote detailed manual about this plugin in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#1f80ba301cd74cc6b3f46a7a1b1fffa3).  
   
-### csv
+## csv
 
-#### Installation
+### Installation
 ```console
 > flutter flutter pub add   
 ```  
   
-#### Configuration
+### Configuration
   
   
-#### Usage
+### Usage
   
   
-### google_mobile_ads
+## google_mobile_ads
 
-#### Installation
+### Installation
 This allows you to use google mobile ad banner in organized form/widget.  
 
 ```console
@@ -292,28 +293,28 @@ This allows you to use google mobile ad banner in organized form/widget.
 I also had to write manual in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#1f80ba301cd74cc6b3f46a7a1b1fffa3) since this plugin also requires lots of information about google cloud platform, firebase, and Admob  
   
   
-### geolocator
+## geolocator
 
-#### Installation
+### Installation
 This gives you exact coordinates about your location  
   
 ```console
 > flutter flutter pub add geolocator  
 ```  
   
-#### Configuration
+### Configuration
   Will be updated in Ver 1.0
   
-#### Usage
+### Usage
   Will be updated in Ver 1.0
   
-### etc
+## etc
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
 
 flutter pub get 할 때 받는 파일들(명령어
 내가 어떻게 썼는지(사용), 어떻게 쓰는지(설정)
 
-# 3. Getting Started
+# 4. Setting Configuration
 
 	This project is a starting point for a Flutter application.
 	
