@@ -18,6 +18,13 @@ And I published this App via Google Play Store
 [**5. Used Concept**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#5-Used-Concept)  
 [**6. Usage Example**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#6-Usage-Example)  
 
+## Undone Document
+  
+[**System Link with your DB(database)**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#system-link-with-your-dbdatabase)  
+[**etc packages**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#etc)  
+[**Used Concept**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#5-Used-Concept)  
+[**Usage Example**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#6-Usage-Example)  
+  
 # 1. File Structure
 
 ```
