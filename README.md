@@ -264,7 +264,7 @@ This allows you to use Naver API via naver_map_plugin.
 > flutter flutter pub add naver_map_plugin  
 ```  
   
-Because this plugin requires lots of information of naver cloud platform,  
+Because this plugin requires lots of information about naver cloud platform,  
 I wrote detailed manual about this plugin in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#1f80ba301cd74cc6b3f46a7a1b1fffa3).  
   
 ### csv
@@ -283,28 +283,29 @@ I wrote detailed manual about this plugin in [My Notion(in Kor)](https://www.not
 ### google_mobile_ads
 
 #### Installation
+This allows you to use google mobile ad banner in organized form/widget.  
+
 ```console
-> flutter flutter pub add   
+> flutter flutter pub add google_mobile_ads  
 ```  
   
-#### Configuration
-  
-  
-#### Usage
+I also had to write manual in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#1f80ba301cd74cc6b3f46a7a1b1fffa3) since this plugin also requires lots of information about google cloud platform, firebase, and Admob  
   
   
 ### geolocator
 
 #### Installation
+This gives you exact coordinates about your location  
+  
 ```console
-> flutter flutter pub add   
+> flutter flutter pub add geolocator  
 ```  
   
 #### Configuration
-  
+  Will be updated in Ver 1.0
   
 #### Usage
-  
+  Will be updated in Ver 1.0
   
 ### etc
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
