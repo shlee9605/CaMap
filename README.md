@@ -258,15 +258,14 @@ After setting up your `.env`, we will use them in `C:\Workspace\android\app\src\
 ### naver_map_plugin
 
 #### Installation
+This allows you to use Naver API via naver_map_plugin.  
+
 ```console
-> flutter flutter pub add   
+> flutter flutter pub add naver_map_plugin  
 ```  
   
-#### Configuration
-  
-  
-#### Usage
-  
+Because this plugin requires lots of information of naver cloud platform,  
+I wrote detailed manual about this plugin in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#1f80ba301cd74cc6b3f46a7a1b1fffa3).  
   
 ### csv
 
