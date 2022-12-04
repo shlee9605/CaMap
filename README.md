@@ -15,6 +15,7 @@ And I published this App via Google Play Store
 .
 ├── android			    # android config
 │   ├── .gradle		            # gradle config
+│   │   └── ...etc
 │   ├── app
 │   │   ├── src
 │   │   │   ├── debug		    # debug manifest
@@ -35,7 +36,8 @@ And I published this App via Google Play Store
 │   ├── local.properties	    # local properties
 │   └── ...etc
 ├── ios				    # ios config
-│   ├── Flutter
+│   ├── Flutter			    # flutter ios config
+│   │   └── ...etc
 │   ├── Runner
 │   │   ├── Assets.xcassets	    # app icons
 │   │   ├── Base.lproj		    
@@ -43,17 +45,27 @@ And I published this App via Google Play Store
 │   │   ├── Info.plist		    # ios runner config
 │   │   └── ...etc
 │   └── ...etc
-├── lib                             # DB를 사용하는 sequelize의 쿼리 함수용 폴더
-│   ├── departmentDao.js
-│   ├── deviceDao.js
-│   └── userDao.js
-├── linux                           # 자체 제작한 라이브러리 모음 폴더
-│   ├── hashUtil.js                 # hash함수용 유틸
-│   ├── logger.js                   # 로그처리용 유틸
-│   ├── middleware.js               # 미들웨어 함수 모음
-│   └── tokenUtil.js                # 토큰 처리용 함수 모음
+├── lib                             # main function library
+│   ├── custom_class		    # custom location classes
+│   ├── services		    # minor services classes
+│   └── main.dart		    # main
+├── linux                           # linux cconfig
+│   ├── flutter 	            # flutter linux config
+│   │   └── ...etc
+│   ├── CMakeLists.txt              # cmake config
+│   ├── main.cc		            # main linux
+│   ├── my_application.cc	    # main config
+│   └── my_application.h            # my_application library
 ├── macos                           # 로그 폴더
-│   └── ...
+│   ├── Flutter		   	    # flutter ios config
+│   │   └── ...etc
+│   ├── Runner
+│   │   ├── Assets.xcassets	    # app icons
+│   │   ├── Base.lproj		    
+│   │   ├── AppDelegate.swift
+│   │   ├── Info.plist		    # ios runner config
+│   │   └── ...etc
+│   └── ...etc
 ├── test                            # DB를 모델링하는 sequelize의 모델 함수용 폴더
 │   ├── connection.js               # DB연결 처리 함수
 │   ├── department.js
