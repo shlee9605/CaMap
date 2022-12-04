@@ -11,7 +11,7 @@ And I published this App via Google Play Store
 
 ## - Index  
 
-1. File Structure  
+[**1. File Structure**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#1-file-structure)  
 2. Develop Environment  
 3. Getting Started  
 4. Used Concept  
@@ -87,34 +87,26 @@ And I published this App via Google Play Store
 │   │   └── ...etc
 │   ├── CMakeLists.txt
 │   └── ...etc
-├── .dart_tool                          # Router 폴더
-│   ├── auth.js
-│   ├── department.js
-│   ├── device.js
-│   ├── index.js                    # Router 설정 인덱스 파일
-│   └── user.js
-├── .idea                         # 비즈니스 로직 폴더
-│   ├── departmentService.js
-│   ├── deviceService.js
-│   └── userService.js
-├── .vscode                           # express에서 생성한 프론트용 화면(사용하지 않음)
-│   ├── error.ejs
-│   └── index.ejs
-├── assets                           # express에서 생성한 프론트용 화면(사용하지 않음)
-│   ├── error.ejs
-│   └── index.ejs
-├── build                           # express에서 생성한 프론트용 화면(사용하지 않음)
-│   ├── error.ejs
-│   └── index.ejs
+├── .dart_tool                      #  pub package folder
+│   └── ...etc
+├── .idea                           # IDE config
+│   └── ...etc
+├── .vscode                         # VS Code config
+│   └── ...etc
+├── assets                          # assets for program
+│   ├── areas			    # location data in csv
+│   └── markers			    # marker image icon in png
+├── build                           # build outputs
+│   └── ...etc
 ├── .metadata
 ├── analysis_options.yaml
 ├── pubspec.lock
-├── pubspec.yaml
+├── pubspec.yaml		    # pub library declare
 ├── README.md
-├── .env                            # (개발용)환경설정 파일(직접 생성)
-├── .flutter-plugins                  # eslint 설정 파일
-├── .flutter-plugins-dependencies     # eslint 설정 파일
-├── .gitignore                      # eslint 설정 파일
+├── .env                            # development config
+├── .flutter-plugins
+├── .flutter-plugins-dependencies
+├── .gitignore                      # main config
 └── camap.iml
 ```
 
