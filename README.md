@@ -9,7 +9,7 @@ But, I believe you can use it in foreign country, if you get used to using Googl
 I've got the area informaition from Seoul City hall,  
 And I published this App via Google Play Store
 
-## - Index  
+## Index  
 
 [**1. File Structure**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#1-file-structure)  
 [**2. Develop Environment**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#2-Develop-Environment)  
