@@ -224,7 +224,7 @@ This allows you to use `.env` files.
   
 ### Configuration
 For this project, You need to setup variables below in your `C:\Workspace\.env`.  
-Create `.env` file, then setup like below.  
+Create `.env` file in your `C:\Workspace`, then setup like below.  
 *You must get your ID's from cloud platform first.*  
 ```
 YOUR_CLIENT_ID_HERE = "Naver Client ID"
@@ -307,8 +307,16 @@ This gives you exact coordinates about your location
   
   
 # 4. Setting Configuration
+Create your `.gitignore` file in `C:\Workspace`, then setup like below.  
 In `C:\Workspace\.gitignore`,  
-
+```
+.env
+assets/
+/android/key.properties
+/android/app/camap.jks
+/android/app/proguard-rules.pro
+...       # default .gitignore for flutter  
+```
 
 In `C:\Workspace\pubspec.yaml`,  
 
