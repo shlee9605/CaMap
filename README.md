@@ -1,5 +1,5 @@
 # 0. Abstract
-
+**Notion : [Flutter Naver Map](https://www.notion.so/shlee9605/Flutter-NaverMap-8b85ea7e488349e295868b07d104180e)**
 **This project is about public interest.**  
 **This project started to seperate non-smokers from secondhand smoke.**  
 This map displays Near Smoking Zone and Trash Can, thus, non-smokers can avoid certain area  
@@ -125,8 +125,10 @@ Then, set your working space for flutter
 ```console
 > cd C:\Workspace
 ```
+  
+### Installation
+You need to set up both Android Studio and Flutter
 
-디렉토리 이동  
 플러터 설치  
 플러터 폴더 생성  
 
