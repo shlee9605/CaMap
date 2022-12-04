@@ -175,6 +175,7 @@ You can find your appbundle here : **`C:\Workspace\build\app\outputs\bundle\rele
 > flutter build appbundle --debug
 ```  
   
+```console
 If null safety error occurs,
 > flutter build appbundle --no-sound-null-safety
 > flutter build appbundle --release --no-sound-null-safety
