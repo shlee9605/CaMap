@@ -6,7 +6,7 @@ import 'package:csv/csv.dart';
 import 'custom_location.dart';
 
 class SmokingAreaData {
-  //for trashcan area
+  //for smoking area
   static List<List<dynamic>>? csvData;
 
   //read csv data from assets/areas
