@@ -13,9 +13,9 @@ And I published this App via Google Play Store
 
 [**1. File Structure**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#1-file-structure)  
 [**2. Develop Environment**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#2-Develop-Environment)  
-3. Getting Started  
-4. Used Concept  
-5. Example  
+[**3. Getting Started**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#3-Getting-Started)  
+[**4. Used Concept**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#4-Used-Concept)  
+[**5. Usage Example**](https://github.com/shlee9605/CaMap/blob/Ver0.6/README.md#5-Usage-Example)  
 
 # 1. File Structure
 
@@ -142,6 +142,6 @@ DB연동
 
 CRUD구조 같은 거
 
-# 5. Example
+# 5. Usage Example
 
 프로그램 예시
