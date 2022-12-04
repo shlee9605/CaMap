@@ -182,8 +182,10 @@ If null safety error occurs,
 > flutter build appbundle --debug --no-sound-null-safety
 ```  
   
-## Package Management
+## Package & Asset Management
+In `C:\Workspace\pubspec.yaml`,  
 
+**Packages**
 ```RAML
 dependencies:
   flutter:
@@ -196,6 +198,16 @@ dependencies:
   csv: ^5.0.0 #for reading csv
   google_mobile_ads: ^2.3.0 #for google ad
   geolocator: ^8.2.1  
+```
+
+**Assets**
+```RAML
+flutter:
+  uses-material-design: true
+
+  assets:
+  - assets/markers/ #for marker location in csv
+  - assets/areas/ #for marker image icon in png
 ```
 
 ### cupertino_icons
