@@ -20,7 +20,7 @@ class SmokingArea implements AreaType {
   final String name = "흡연구역";
 
   @override
-  final String markerImage = "assets/markers/restaurant.png";
+  final String markerImage = "assets/markers/smoking.png";
 
   @override
   final Color color = const Color.fromARGB(255, 255, 0, 0);
@@ -42,15 +42,37 @@ class TrashCan implements AreaType {
   final String name = "쓰레기통";
 
   @override
-  final String markerImage = "assets/markers/cafe.png";
+  final String markerImage = "assets/markers/trash.png";
 
   @override
-  final Color color = const Color.fromARGB(255, 0, 255, 0);
+  final Color color = const Color.fromARGB(116, 0, 68, 177);
 
   @override
   final LatLng location;
 
   TrashCan({
+    required this.aid,
+    required this.location,
+  });
+}
+
+class SmokeCan implements AreaType {
+  @override
+  final String aid;
+
+  @override
+  final String name = "담배꽁초수거함";
+
+  @override
+  final String markerImage = "assets/markers/smoke.png";
+
+  @override
+  final Color color = const Color.fromARGB(255, 0, 88, 15);
+
+  @override
+  final LatLng location;
+
+  SmokeCan({
     required this.aid,
     required this.location,
   });
