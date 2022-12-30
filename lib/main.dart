@@ -17,6 +17,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart'; //for google ad
 import 'package:camap/custom_class/custom_location.dart';
 import 'package:camap/custom_class/smokingarea_location.dart';
 import 'package:camap/custom_class/trashcan_location.dart';
+import 'package:camap/custom_class/smokecan_location.dart';
 
 // import 'custom_class/test_data.dart';    //for test
 
@@ -24,7 +25,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await FlutterConfig.loadEnvVariables(); //for dotenv
-  MobileAds.instance.initialize(); //for adroid ads
+  MobileAds.instance.initialize(); //for android ads
 
   runApp(const MyApp());
 }
@@ -108,8 +109,8 @@ class _MyMapState extends State<MyMapState> {
 
     final BannerAd newbanner = BannerAd(
       size: size,
-      // adUnitId: 'ca-app-pub-6031365222069976/3224225914',
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111', //test ad
+      adUnitId: 'ca-app-pub-6031365222069976/3224225914',
+      // adUnitId: 'ca-app-pub-3940256099942544/6300978111', //test ad
       listener: BannerAdListener(
         //for ad state, print in debug console
         // onAdClicked: ,
@@ -124,7 +125,7 @@ class _MyMapState extends State<MyMapState> {
           ad.dispose();
         }),
         onAdOpened: (Ad ad) => print('$BannerAd onAdOpened.'),
-        onAdClosed: (Ad ad) => print('$BannerAd onAdOpened.'),
+        onAdClosed: (Ad ad) => print('$BannerAd onAdClosed.'),
       ),
       request: const AdRequest(),
     );
@@ -143,6 +144,7 @@ class _MyMapState extends State<MyMapState> {
       //input marker in initstate
       markers.addAll(await SmokingAreaData.markers());
       markers.addAll(await TrashCanData.markers());
+      markers.addAll(await SmokeCanData.markers());
 
       //set marker images
       setState(() {
@@ -162,44 +164,41 @@ class _MyMapState extends State<MyMapState> {
       _createBanner(context);
     }
 
-    //try catch banner null
-    if (banner == null) {
-      return Scaffold(
-        body: Container(),
-      );
-    }
-
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-        centerTitle: true, //center title true
-      ),
-      //body for naver map
-      body: Center(
-        child: NaverMap(
-          initialCameraPosition: const CameraPosition(
-            //starting camera position
-            target: LatLng(37.496406, 127.028363),
-            // zoom: 17,
-            zoom: 11,
-          ),
-          onMapCreated: onMapCreated, //call naver map controller
-          locationButtonEnable: true, //current location button
-          indoorEnable: true, //indoor API
-          mapType: _mapType, //maptype is default(basic)
-          markers: markers, //call markers I made
+        appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+          centerTitle: true, //center title true
         ),
-      ),
-      //bottom bar for ads
-      bottomNavigationBar: Container(
-        color: Colors.green,
-        width: banner!.size.width.toDouble(), //for banner size
-        height: banner!.size.height.toDouble(),
-        child: AdWidget(ad: banner!), //call ad banner
-      ),
-    );
+        //body for naver map
+        body: Center(
+          child: NaverMap(
+            initialCameraPosition: const CameraPosition(
+              //starting camera position
+              target: LatLng(37.496406, 127.028363),
+              // zoom: 17,
+              zoom: 11,
+            ),
+            onMapCreated: onMapCreated, //call naver map controller
+            locationButtonEnable: true, //current location button
+            indoorEnable: true, //indoor API
+            mapType: _mapType, //maptype is default(basic)
+            markers: markers, //call markers I made
+          ),
+        ),
+        //bottom bar for ads
+        bottomNavigationBar: banner != null //if banner can't be loaded
+            ? Container(
+                color: Colors.green,
+                width: banner!.size.width.toDouble(), //for banner size
+                height: banner!.size.height.toDouble(),
+                child: AdWidget(ad: banner!) //call ad banner
+                )
+            : Container(
+                color: Colors.green,
+                child: const Text('No Banner Loaded!!!'),
+              ));
   }
 
   @override

@@ -1,5 +1,5 @@
 import 'package:geolocator/geolocator.dart';
-import '../custom_class/custom_location.dart';
+// import '../custom_class/custom_location.dart';
 
 class LocationService {
   // static const LocationClass initLocation =
