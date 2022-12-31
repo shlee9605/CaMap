@@ -67,7 +67,7 @@ class SmokeCan implements AreaType {
   final String markerImage = "assets/markers/smoke.png";
 
   @override
-  final Color color = const Color.fromARGB(255, 0, 88, 15);
+  final Color color = const Color.fromARGB(255, 88, 0, 0);
 
   @override
   final LatLng location;
@@ -89,7 +89,7 @@ class CustomMarker extends Marker {
       super.height = 30})
       : super(
             markerId: area.aid,
-            captionText: area.name,
+            // captionText: area.name,
             iconTintColor: area.color);
 
   //make marker when areatype is given
@@ -100,5 +100,11 @@ class CustomMarker extends Marker {
   Future<void> createImage(BuildContext context) async {
     icon = await OverlayImage.fromAssetImage(
         assetName: area.markerImage, context: context);
+  }
+
+  //When Marker Touched
+  void setOnMarkerTab(
+      void Function(Marker marker, Map<String, int> iconSize) callBack) {
+    onMarkerTab = callBack;
   }
 }
