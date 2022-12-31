@@ -19,6 +19,9 @@ import 'package:camap/custom_class/smokingarea_location.dart';
 import 'package:camap/custom_class/trashcan_location.dart';
 import 'package:camap/custom_class/smokecan_location.dart';
 
+//widget Components
+import 'package:camap/components/area_info_widget.dart';
+
 // import 'custom_class/test_data.dart';    //for test
 
 void main() async {
@@ -73,14 +76,13 @@ class MyMapState extends StatefulWidget {
 class _MyMapState extends State<MyMapState> {
   ///////////Main Body Map Controller///////////
 
-  Completer<NaverMapController> _controller = Completer(); //completer for async
+  // Completer<NaverMapController> _controller = Completer(); //completer for async
   final MapType _mapType = MapType.Basic; //final stands for unchangable value
 
+  NaverMapController? _controller;
+
   void onMapCreated(NaverMapController controller) {
-    //create naver map controller ->
-    //ontap, double tap, etc... from naver plugin
-    if (_controller.isCompleted) _controller = Completer();
-    _controller.complete(controller);
+    _controller = controller;
   }
 
   List<CustomMarker> markers = []; //for marker List
@@ -136,6 +138,7 @@ class _MyMapState extends State<MyMapState> {
   ///////////Main Advertisement Controller///////////
 
   ///////////Main Widget///////////
+  CustomMarker? tappedmarker;
 
   @override //when overlay image,
   void initState() {
@@ -146,10 +149,21 @@ class _MyMapState extends State<MyMapState> {
       markers.addAll(await TrashCanData.markers());
       markers.addAll(await SmokeCanData.markers());
 
-      //set marker images
+      //set marker images & on tab action
       setState(() {
         for (CustomMarker marker in markers) {
           marker.createImage(context);
+          marker
+              .setOnMarkerTab((Marker marker, Map<String, int> iconSize) async {
+            //find tabbed marker
+            tappedmarker =
+                markers.firstWhere((e) => e.markerId == marker.markerId);
+            //for state config
+            setState(() {});
+            //camera movement on marker
+            await _controller
+                ?.moveCamera(CameraUpdate.scrollTo(marker.position));
+          });
         }
       });
     });
@@ -172,20 +186,30 @@ class _MyMapState extends State<MyMapState> {
           centerTitle: true, //center title true
         ),
         //body for naver map
-        body: Center(
-          child: NaverMap(
-            initialCameraPosition: const CameraPosition(
-              //starting camera position
-              target: LatLng(37.496406, 127.028363),
-              // zoom: 17,
-              zoom: 11,
+        body: Stack(
+          children: <Widget>[
+            NaverMap(
+              initialCameraPosition: const CameraPosition(
+                //starting camera position
+                target: LatLng(37.496406, 127.028363),
+                // zoom: 17,
+                zoom: 11,
+              ),
+              onMapTap: (latLng) {
+                setState(() {
+                  tappedmarker = null;
+                });
+              },
+              onMapCreated: onMapCreated, //call naver map controller
+              locationButtonEnable: true, //current location button
+              indoorEnable: true, //indoor API
+              mapType: _mapType, //maptype is default(basic)
+              markers: markers, //call markers I made
             ),
-            onMapCreated: onMapCreated, //call naver map controller
-            locationButtonEnable: true, //current location button
-            indoorEnable: true, //indoor API
-            mapType: _mapType, //maptype is default(basic)
-            markers: markers, //call markers I made
-          ),
+            tappedmarker != null
+                ? AreaInfoWidget(area: tappedmarker!.area)
+                : Container(),
+          ],
         ),
         //bottom bar for ads
         bottomNavigationBar: banner != null //if banner can't be loaded
