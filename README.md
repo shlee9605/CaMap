@@ -354,50 +354,24 @@ This gives you exact coordinates about your location
 ### Usage
   Will be updated in Ver 2.0
   
-## firebase_core
+## firebase
 
 ### Installation
 This gives you exact coordinates about your location  
   
 ```console
 > flutter flutter pub add firebase_core  
-```  
-  
-### Configuration
-  Will be updated in Ver 2.0
-  
-### Usage
-  Will be updated in Ver 2.0
-  
-## firebase_analytics
-
-### Installation
-This gives you exact coordinates about your location  
-  
-```console
 > flutter flutter pub add firebase_analytics  
-```  
-  
-### Configuration
-  Will be updated in Ver 2.0
-  
-### Usage
-  Will be updated in Ver 2.0  
-  
-## firebase_crashlytics
-
-### Installation
-This gives you exact coordinates about your location  
-  
-```console
 > flutter flutter pub add firebase_crashlytics  
 ```  
   
 ### Configuration
-  Will be updated in Ver 2.0
+Because Firebase configuration requires some of firebase knowledge,  
+I wrote detailed manual about it in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#ec7f93f46822458d9dcf6c19fb51af16).
   
 ### Usage
-  Will be updated in Ver 2.0  
+  Will be updated in Ver 2.0
+  
   
 ## etc
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
