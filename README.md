@@ -419,7 +419,18 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 ```  
   
 #### firebase_crashlytics
-  
+```dart
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+...
+//in main
+  //firebase crashlytics
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
+...
+```
   
 ## etc
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
