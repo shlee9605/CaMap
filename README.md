@@ -65,7 +65,7 @@ And I published this App via Google Play Store
 │   ├── custom_class		    # custom location classes
 │   ├── services		    # minor services classes
 │   ├── view		            # screen view classes
-│   ├── firebase_options.dart # firebase platform options
+│   ├── firebase_options.dart     # firebase platform options
 │   └── main.dart		    # main
 ├── linux                           # linux cconfig
 │   ├── flutter 	            # flutter linux config
