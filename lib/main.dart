@@ -33,8 +33,6 @@ import 'dart:ui'; //platform dispatcher
 import 'package:camap/view/home.dart';
 import 'package:camap/view/login.dart';
 
-// import 'custom_class/test_data.dart';    //for test
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -129,8 +127,7 @@ class MyMapState extends StatefulWidget {
 class _MyMapState extends State<MyMapState> {
   ///////////firebase analytics logger///////////
 
-  Future<void> _sendAnalyticsEvent(s) async {
-    // Future<void> _sendAnalyticsEvent() async {
+  Future<void> firebaseAnalyticsEvent(s) async {
     await widget.analytics.logEvent(
       name: 'marker_click_event',
       parameters: <String, dynamic>{
@@ -143,7 +140,6 @@ class _MyMapState extends State<MyMapState> {
 
   ///////////Main Body Map Controller///////////
 
-  // Completer<NaverMapController> _controller = Completer(); //completer for async
   final MapType _mapType = MapType.Basic; //final stands for unchangable value
 
   NaverMapController? _controller;
@@ -153,11 +149,6 @@ class _MyMapState extends State<MyMapState> {
   }
 
   List<CustomMarker> markers = []; //for marker List
-
-  // List<CustomMarker> myMarkers = [   //for test
-  //   ...TestData.markers(),
-  // ...SmokingAreaData.markers()
-  // ];
 
   ///////////Main Body Map Controller///////////
 
@@ -226,7 +217,7 @@ class _MyMapState extends State<MyMapState> {
             tappedmarker =
                 markers.firstWhere((e) => e.markerId == marker.markerId);
             //firebase click event
-            _sendAnalyticsEvent(tappedmarker!.area.name);
+            firebaseAnalyticsEvent(tappedmarker!.area.name);
             //for state config
             setState(() {});
             //camera movement on marker
