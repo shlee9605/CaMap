@@ -60,9 +60,9 @@ And I published this App via Google Play Store
 │   │   ├── Info.plist		    # ios runner config
 │   │   └── ...etc
 │   └── ...etc
-├── lib                         # main function library
-│   ├── components		          # components widget classes
-│   ├── custom_class		        # custom location classes
+├── lib                             # main function library
+│   ├── components		    # components widget classes
+│   ├── custom_class		    # custom location classes
 │   ├── services		            # minor services classes
 │   ├── view		                # screen view classes
 │   ├── firebase_options.dart		# firebase platform options
