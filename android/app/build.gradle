@@ -1,3 +1,10 @@
+//for firebase plugin
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -13,7 +20,7 @@ if (flutterRoot == null) {
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
 if (flutterVersionCode == null) {
-    flutterVersionCode = '6'
+    flutterVersionCode = '7'
 }
 
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
@@ -21,7 +28,9 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.1.0'
 }
 
-apply plugin: 'com.android.application'
+// apply plugin: 'com.google.gms.google-services'
+// apply plugin: 'com.google.firebase.crashlytics'
+// apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 apply from: project(':flutter_config').projectDir.getPath() + "/dotenv.gradle"

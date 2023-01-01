@@ -22,10 +22,35 @@ import 'package:camap/custom_class/smokecan_location.dart';
 //widget Components
 import 'package:camap/components/area_info_widget.dart';
 
+//firebase
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'dart:ui'; //platform dispatcher
+
+//view
+import 'package:camap/view/home.dart';
+import 'package:camap/view/login.dart';
+
 // import 'custom_class/test_data.dart';    //for test
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  //firebase core
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  //firebase crashlytics
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
+
+  // FirebaseCrashlytics.instance.crash(); //test crashlytics
 
   await FlutterConfig.loadEnvVariables(); //for dotenv
   MobileAds.instance.initialize(); //for android ads
@@ -34,6 +59,11 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  //firebase analytics
+  static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  static FirebaseAnalyticsObserver observer =
+      FirebaseAnalyticsObserver(analytics: analytics);
+
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -46,26 +76,49 @@ class MyApp extends StatelessWidget {
         //my app theme
         primarySwatch: Colors.orange,
       ),
-      home: const MyMap(), //go to myMap
+      navigatorObservers: <NavigatorObserver>[observer], //firebase observer
+      initialRoute: '/', //start from map
+      routes: {
+        // go to map
+        '/': (context) => MyMap(
+              analytics: analytics,
+              observer: observer,
+            ),
+        // go to home
+        '/home': (context) => const HomeScreen(),
+        '/login': (context) => LoginPage(observer: observer),
+      },
     );
   }
 }
 
 class MyMap extends StatelessWidget {
   //when IOS version releases, need to separate from here
-  const MyMap({super.key});
+  const MyMap({super.key, required this.analytics, required this.observer});
+
+  final FirebaseAnalytics analytics;
+  final FirebaseAnalyticsObserver observer;
 
   @override
   Widget build(BuildContext context) {
-    return const MyMapState(
+    return MyMapState(
       title: "CaMaP",
+      analytics: analytics,
+      observer: observer,
     );
   }
 }
 
 class MyMapState extends StatefulWidget {
   //create stateful widget
-  const MyMapState({super.key, required this.title});
+  const MyMapState(
+      {super.key,
+      required this.title,
+      required this.analytics,
+      required this.observer});
+
+  final FirebaseAnalytics analytics;
+  final FirebaseAnalyticsObserver observer;
 
   final String title;
 
@@ -74,6 +127,20 @@ class MyMapState extends StatefulWidget {
 }
 
 class _MyMapState extends State<MyMapState> {
+  ///////////firebase analytics logger///////////
+
+  Future<void> _sendAnalyticsEvent(s) async {
+    // Future<void> _sendAnalyticsEvent() async {
+    await widget.analytics.logEvent(
+      name: 'marker_click_event',
+      parameters: <String, dynamic>{
+        'string': s,
+        'int': 100,
+      },
+    );
+  }
+  ///////////firebase analytics logger///////////
+
   ///////////Main Body Map Controller///////////
 
   // Completer<NaverMapController> _controller = Completer(); //completer for async
@@ -158,6 +225,8 @@ class _MyMapState extends State<MyMapState> {
             //find tabbed marker
             tappedmarker =
                 markers.firstWhere((e) => e.markerId == marker.markerId);
+            //firebase click event
+            _sendAnalyticsEvent(tappedmarker!.area.name);
             //for state config
             setState(() {});
             //camera movement on marker
@@ -181,9 +250,29 @@ class _MyMapState extends State<MyMapState> {
     return Scaffold(
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
+          // leading sidebar button
+          leading: IconButton(
+            icon: const Icon(Icons.view_sidebar),
+            tooltip: 'Leading',
+            onPressed: () => {},
+          ),
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
           centerTitle: true, //center title true
+          //routing pages
+          actions: <Widget>[
+            IconButton(
+              //route home
+              icon: const Icon(Icons.home),
+              tooltip: 'Home',
+              onPressed: () => {Navigator.of(context).pushNamed('/home')},
+            ),
+            IconButton(
+              icon: const Icon(Icons.login),
+              tooltip: 'Login',
+              onPressed: () => {Navigator.of(context).pushNamed('/login')},
+            ),
+          ],
         ),
         //body for naver map
         body: Stack(
