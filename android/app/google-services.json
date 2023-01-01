@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "58420873855",
+    "project_id": "camap-317b8",
+    "storage_bucket": "camap-317b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58420873855:android:1847ed301f7fbb64928d4a",
+        "android_client_info": {
+          "package_name": "com.wolfandcamel.camap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58420873855-7tm6p5nsgsblbr4rvkmjrtefs82475k6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrNljufHTPN3jBKfZTlUmQmUuCA0SO5LU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58420873855-7tm6p5nsgsblbr4rvkmjrtefs82475k6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "58420873855-amc1r7qtiimo90rqgk2vm5f50dbbum84.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.camap"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
