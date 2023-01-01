@@ -370,7 +370,26 @@ Because Firebase configuration requires some of firebase knowledge,
 I wrote detailed manual about it in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#ec7f93f46822458d9dcf6c19fb51af16).
   
 ### Usage
-  Will be updated in Ver 2.0
+I will describe them in three steps; core, analytics, and crashlytics  
+
+#### firebase_core
+```dart
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+...
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  //firebase core
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+}
+```
+#### firebase_analytics
+  
+  
+#### firebase_crashlytics
   
   
 ## etc
