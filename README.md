@@ -387,7 +387,36 @@ void main() async {
 }
 ```
 #### firebase_analytics
-  
+```dart
+import 'package:firebase_analytics/firebase_analytics.dart';
+...
+//in MyApp Stateless Widget
+  static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  static FirebaseAnalyticsObserver observer =
+      FirebaseAnalyticsObserver(analytics: analytics);
+...
+//in MyMapState Stateful Widget
+  const MyMapState(
+      {super.key,
+      required this.title,
+      required this.analytics,
+      required this.observer});
+
+  final FirebaseAnalytics analytics;
+  final FirebaseAnalyticsObserver observer;
+...
+//in MyMapState State
+  Future<void> firebaseAnalyticsEvent(s) async {
+    await widget.analytics.logEvent(
+      name: 'marker_click_event',
+      parameters: <String, dynamic>{
+        'string': s,
+        'int': 100,
+      },
+    );
+  }
+...
+```  
   
 #### firebase_crashlytics
   
