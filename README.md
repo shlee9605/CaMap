@@ -63,10 +63,10 @@ And I published this App via Google Play Store
 ├── lib                             # main function library
 │   ├── components		    # components widget classes
 │   ├── custom_class		    # custom location classes
-│   ├── services		            # minor services classes
-│   ├── view		                # screen view classes
-│   ├── firebase_options.dart		# firebase platform options
-│   └── main.dart		            # main
+│   ├── services		    # minor services classes
+│   ├── view		            # screen view classes
+│   ├── firebase_options.dart# firebase platform options
+│   └── main.dart		        # main
 ├── linux                           # linux cconfig
 │   ├── flutter 	            # flutter linux config
 │   │   └── ...etc
