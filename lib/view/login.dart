@@ -68,10 +68,13 @@ class _LoginPage extends State<LoginPage>
       body: TabBarView(
         controller: _controller,
         children: tabs.map((Tab tab) {
-          return TextButton(
-            onPressed: () => throw Exception(),
-            child: Text(tab.text!),
-          );
+          return Text(tab.text!);
+
+          // for crashlytics check
+          // return TextButton(
+          //   onPressed: () => throw Exception(),
+          //   child: Text(tab.text!),
+          // );
         }).toList(),
       ),
     );

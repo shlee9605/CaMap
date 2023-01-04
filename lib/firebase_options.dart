@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '58420873855',
     projectId: 'camap-317b8',
     storageBucket: 'camap-317b8.appspot.com',
-    iosClientId: '58420873855-amc1r7qtiimo90rqgk2vm5f50dbbum84.apps.googleusercontent.com',
+    iosClientId:
+        '58420873855-amc1r7qtiimo90rqgk2vm5f50dbbum84.apps.googleusercontent.com',
     iosBundleId: 'com.example.camap',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '58420873855',
     projectId: 'camap-317b8',
     storageBucket: 'camap-317b8.appspot.com',
-    iosClientId: '58420873855-amc1r7qtiimo90rqgk2vm5f50dbbum84.apps.googleusercontent.com',
+    iosClientId:
+        '58420873855-amc1r7qtiimo90rqgk2vm5f50dbbum84.apps.googleusercontent.com',
     iosBundleId: 'com.example.camap',
   );
 }
