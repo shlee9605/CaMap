@@ -61,8 +61,11 @@ And I published this App via Google Play Store
 │   │   └── ...etc
 │   └── ...etc
 ├── lib                             # main function library
+│   ├── components		    # components widget classes
 │   ├── custom_class		    # custom location classes
 │   ├── services		    # minor services classes
+│   ├── view		            # screen view classes
+│   ├── firebase_options.dart       # firebase platform options
 │   └── main.dart		    # main
 ├── linux                           # linux cconfig
 │   ├── flutter 	            # flutter linux config
@@ -207,6 +210,10 @@ dependencies:
   csv: ^5.0.0 							#for reading csv
   google_mobile_ads: ^2.3.0 					#for google ad
   geolocator: ^8.2.1  
+  
+  firebase_core: ^2.4.1 #for firebase  
+  firebase_analytics: ^10.1.0 #for firebase analytics  
+  firebase_crashlytics: ^3.0.9  #for firebase crashlytics  
 ```
   
 ## cupertino_icons
@@ -342,10 +349,88 @@ This gives you exact coordinates about your location
 ```  
   
 ### Configuration
-  Will be updated in Ver 1.0
+  Will be updated in Ver 2.0
   
 ### Usage
-  Will be updated in Ver 1.0
+  Will be updated in Ver 2.0
+  
+## firebase
+
+### Installation
+This gives you exact coordinates about your location  
+  
+```console
+> flutter flutter pub add firebase_core  
+> flutter flutter pub add firebase_analytics  
+> flutter flutter pub add firebase_crashlytics  
+```  
+  
+### Configuration
+Because Firebase configuration requires some of firebase knowledge,  
+I wrote detailed manual about it in [My Notion(in Kor)](https://www.notion.so/shlee9605/959ac634936b4a96be20363bc153f53e#ec7f93f46822458d9dcf6c19fb51af16).
+  
+### Usage
+I will describe them in three steps; core, analytics, and crashlytics  
+
+#### firebase_core
+```dart
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+...
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  //firebase core
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+}
+```
+#### firebase_analytics
+```dart
+import 'package:firebase_analytics/firebase_analytics.dart';
+...
+//in MyApp Stateless Widget
+  static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  static FirebaseAnalyticsObserver observer =
+      FirebaseAnalyticsObserver(analytics: analytics);
+...
+//in MyMapState Stateful Widget
+  const MyMapState(
+      {super.key,
+      required this.title,
+      required this.analytics,
+      required this.observer});
+
+  final FirebaseAnalytics analytics;
+  final FirebaseAnalyticsObserver observer;
+...
+//in MyMapState State
+  Future<void> firebaseAnalyticsEvent(s) async {
+    await widget.analytics.logEvent(
+      name: 'marker_click_event',
+      parameters: <String, dynamic>{
+        'string': s,
+        'int': 100,
+      },
+    );
+  }
+...
+```  
+  
+#### firebase_crashlytics
+```dart
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+...
+//in main
+  //firebase crashlytics
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
+...
+```
   
 ## etc
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
