@@ -214,6 +214,7 @@ dependencies:
   firebase_core: ^2.4.1 #for firebase  
   firebase_analytics: ^10.1.0 #for firebase analytics  
   firebase_crashlytics: ^3.0.9  #for firebase crashlytics  
+  firebase_messaging: ^14.2.1   #for firebase messaging
 ```
   
 ## cupertino_icons
@@ -363,6 +364,7 @@ This gives you exact coordinates about your location
 > flutter flutter pub add firebase_core  
 > flutter flutter pub add firebase_analytics  
 > flutter flutter pub add firebase_crashlytics  
+> flutter flutter pub add firebase_messaging  
 ```  
   
 ### Configuration
@@ -431,6 +433,58 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
   };
 ...
 ```
+  
+#### firebase_messaging
+```dart
+import 'package:firebase_crashlytics/firebase_messaging.dart';  
+...
+//in MyApp
+  ///////////firebase messaging///////////
+  _initFirebaseMessaging(BuildContext context) {
+    FirebaseMessaging.onMessage.listen((RemoteMessage event) {
+      print(event.notification!.title);
+      print(event.notification!.body);
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: const Text("Alert"),
+              content: Text(event.notification!.body!),
+              actions: [
+                TextButton(
+                  child: const Text("Ok"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                )
+              ],
+            );
+          });
+    });
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {});
+  }
+
+  _getToken() async {
+    FirebaseMessaging messaging = FirebaseMessaging.instance;
+    print("messaging.getToken() , ${await messaging.getToken()}");
+  }
+
+  ///////////firebase messaging///////////
+...
+//in MyApp build MaterialApp
+      initialRoute: '/', //start from map
+      routes: {
+        // go to map
+        '/': (context) => Builder(builder: (context) {
+              _initFirebaseMessaging(context);
+              _getToken();
+              return MyMap(analytics: analytics, observer: observer);
+            }),
+        // go to home
+        '/home': (context) => const HomeScreen(),
+        '/login': (context) => LoginPage(observer: observer),
+      },
+```  
   
 ## etc
 라이브러리 설치 -비밀번호 암호화, 토큰 관리
