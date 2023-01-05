@@ -211,10 +211,10 @@ dependencies:
   google_mobile_ads: ^2.3.0 					#for google ad
   geolocator: ^8.2.1  
   
-  firebase_core: ^2.4.1 #for firebase  
-  firebase_analytics: ^10.1.0 #for firebase analytics  
-  firebase_crashlytics: ^3.0.9  #for firebase crashlytics  
-  firebase_messaging: ^14.2.1   #for firebase messaging
+  firebase_core: ^2.4.1					#for firebase  
+  firebase_analytics: ^10.1.0					#for firebase analytics  
+  firebase_crashlytics: ^3.0.9					#for firebase crashlytics  
+  firebase_messaging: ^14.2.1					#for firebase messaging
 ```
   
 ## cupertino_icons
@@ -484,6 +484,7 @@ import 'package:firebase_crashlytics/firebase_messaging.dart';
         '/home': (context) => const HomeScreen(),
         '/login': (context) => LoginPage(observer: observer),
       },
+...
 ```  
   
 ## etc
